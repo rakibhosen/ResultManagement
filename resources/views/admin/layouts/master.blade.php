@@ -11,6 +11,8 @@
     <link href="{{asset('backend/css/material-dashboard.css?v=2.1.1" rel="stylesheet')}}" />
   <link rel="stylesheet" href="{{asset('backend/vendors/css/vendor.bundle.base.css')}}">
   <link rel="stylesheet" href="{{asset('backend/vendors/css/vendor.bundle.addons.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
@@ -22,13 +24,14 @@
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   @stack('css')
   <style>
-    .admin_panel
+    /* .admin_panel
     {
       font-weight: 800;
-      margin-top: 39px;
+      margin-top: 22px;
       color: #2f2929;
       font-size: 1.5rem;
-    }
+    } */
+
   </style>
 </head>
 

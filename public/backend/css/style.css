@@ -16302,3 +16302,93 @@ ul {
     border-left: 3px solid rgba(255, 255, 255, 0.2); } }
 
 /*# sourceMappingURL=maps/style.css.map */
+.main-panel{
+  background: #3b6e82!important;
+}
+.content-wrapper {
+  background: none!important; 
+
+}
+.card-body {
+  background: #3b6e82!important;
+}
+th {
+  color: #fff!important;
+  background: #0e314a!important;
+  border:none!important;
+}
+td {
+  background: #ffff!important;
+}
+label {
+  
+}
+.menu-title{
+color:#fff!important;
+}
+.menu-icon{
+  color:#ffff!important;
+}
+.sidebar {
+  background:#154654!important;
+}
+div#dataTable_info {
+  color: #ffff!important;
+}
+.card-body h4{
+  color:#fff!important;
+  font-size: 1.4rem!important;
+}
+.card-body h4 a{
+  color:#fff!important;
+  font-size: 1.4rem!important;
+}
+
+
+
+
+input[type="search"] {
+
+  border: none!important;
+}
+
+select {
+  border: none!important;
+}
+body{
+  background: #3b6e82!important;
+
+}
+.navbar.default-layout {
+
+  background: #154654!important;
+}
+.navbar.default-layout .navbar-brand-wrapper {
+
+  background:none!important;
+
+}
+div#dataTable_length {
+  color: #fff;
+}
+div#dataTable_filter {
+  color: #fff;
+}
+.card.card-statistics {
+  
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+.sidebar .nav .nav-item .nav-link:hover {
+ background: #0e3540!important;
+}
+
+.white{
+  color:white;
+}
+
+table {
+  margin-bottom: 15px!important;
+}
+input#myInput {
+  width: 25%;
+}

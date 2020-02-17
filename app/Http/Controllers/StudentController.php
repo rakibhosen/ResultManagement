@@ -20,8 +20,9 @@ class StudentController extends Controller
     }
 
     public function all_student_View()
+
     {
-        $students= Student::orderBy('name','asc')->get();
+        $students= Student::orderBy('name','asc')->paginate(10);
         return view('admin.pages.student.index',compact('students'));
 
     }

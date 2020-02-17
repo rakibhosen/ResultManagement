@@ -4,7 +4,7 @@
 
 
 @push('css')
-<link relation="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+{{-- <link relation="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> --}}
 @endpush
 
 @section('content')
@@ -12,25 +12,26 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-name text-center">Section</h4>
+        <input class="form-control" id="myInput" type="text" placeholder="Search marks...">
         <p class="float-right"><a href="#create_section" data-toggle="modal" class="btn btn-primary">Create</a></p>
       {{-- <p class="float-right"><a class="btn btn-primary" href="{{route('section.create')}}">Add new</a></p> --}}
      
         @include('admin.partials.message')
         <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable">
+          <table class="table table-bordered" >
             <thead>
               <tr>
                 <th width="20%"> Sl No:</th>
                 <th width="30%">Roll</th>
                 <th width="20%"> Subject Name</th>
                 <th width="30%">Sub Code</th>
-                <th width="20%"> Marks</th
+                <th width="20%"> Marks</th>
                 <th width="30%"> Action</th>
             
               </tr>
             </thead>
             @foreach ($marks as $mark)
-            <tbody>
+            <tbody id="myTable">
               <tr class="table-info">
                 <td>
                  {{$loop->index+1}}
@@ -64,6 +65,7 @@
             </tbody>
             @endforeach
           </table>
+          {{ $marks->render() }}
 
 
         </div>
@@ -76,9 +78,20 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-<script>
+{{-- <script>
 $(document).ready( function () {
     $('#dataTable').DataTable();
 } );
-</script>
+</script> --}}
+
+<script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
 @endpush

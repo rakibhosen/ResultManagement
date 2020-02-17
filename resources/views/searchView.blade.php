@@ -24,26 +24,26 @@
                     <tbody>
                         <tr>
                             <td class="td-class" width="30%">Name </td>
-                            <td class="td-class">  {{$studentt->name}}</td>
+                            <td class="td-class"> <span class="badge badge-secondary"> {{$studentt->name}}</span></td>
                         </tr>
     
                         <tr>
                             <td class="td-class" width="30%">Roll</td>
-                            <td class="td-class">  {{$studentt->roll}}</td>
+                            <td class="td-class"> <span class="badge badge-secondary"> {{$studentt->roll}}</span></td>
                         </tr>
     
                         <tr>
                             <td class="td-class" width="30%">Roll</td>
-                            <td class="td-class">  {{$studentt->reg}}</td>
+                            <td class="td-class"> <span class="badge badge-secondary"> {{$studentt->reg}}</span></td>
                         </tr>
     
                         <tr>
                             <td class="td-class" width="30%">Result</td>
-                            <td class="td-class">  {{$studentt->result}}</td>
+                            <td class="td-class"> <span class="badge badge-secondary"> {{$studentt->result}}</span></td>
                         </tr>
                         <tr>
                             <td class="td-class" width="30%">GPA</td>
-                            <td class="td-class">  {{$studentt->gpa}}</td>
+                            <td class="td-class"> <span class="badge badge-secondary"> {{$studentt->gpa}}</span></td>
                         </tr>
                     </tbody>
                     

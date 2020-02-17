@@ -13,6 +13,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-name text-center">Section</h4>
+        <input class="form-control" id="myInput" type="text" placeholder="Search Section...">
         <p class="float-right"><a href="#create_section" data-toggle="modal" class="btn btn-primary">Create</a></p>
       {{-- <p class="float-right"><a class="btn btn-primary" href="{{route('section.create')}}">Add new</a></p> --}}
      
@@ -121,6 +122,7 @@
             </tbody>
             @endforeach
           </table>
+          {{ $sections->render() }}
 
   <!-- ========================Create Modal========================= -->
               <div class="modal fade" id="create_section" tabindex="-1" role="dialog" aria-labelledby="exampleModalCentername" aria-hidden="true">
@@ -165,8 +167,17 @@
 @push('script')
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
 <script>
-$(document).ready( function () {
-    $('#dataTable').DataTable();
-} );
-</script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
+  </script>
+  @endpush
+

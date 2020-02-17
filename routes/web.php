@@ -51,6 +51,9 @@ Route::group(['prefix'=>'admin'], function(){
 
     // admin profile
     Route::get('/profile', 'AdminController@profile')->name('admin.profile');
+
+    // admin avatar
+    // Route::get('avatar', 'AdminController@avatar');
    
   
 

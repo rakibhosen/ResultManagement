@@ -4,7 +4,7 @@
 
 
 @push('css')
-<link relation="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+{{-- <link relation="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> --}}
 
 @endpush
 
@@ -13,10 +13,13 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-name text-center">Student</h4>
+        <input class="form-control" id="myInput" type="text" placeholder="Search Student...">
+
         <p class="float-right"><a href="#create_student" data-toggle="modal" class="btn btn-primary">Create</a></p>
       {{-- <p class="float-right"><a class="btn btn-primary" href="{{route('section.create')}}">Add new</a></p> --}}
      
         @include('admin.partials.message')
+        
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable">
             <thead>
@@ -34,7 +37,7 @@
               </tr>
             </thead>
             @foreach ($students as $student)
-            <tbody>
+            <tbody id="myTable">
               <tr class="table-info">
                 <td>
                  {{$loop->index+1}}
@@ -71,6 +74,7 @@
               
                    <a href="#delete_student{{ $student->id }}" class="btn btn-danger" data-toggle="modal" >Delete</a>
                 </td>  
+               
 
                            <!-- ========================delete Modal========================= -->
            
@@ -166,7 +170,9 @@
               
             </tbody>
             @endforeach
+       
           </table>
+          {{ $students->render() }}
 
             <!-- ========================Create Modal========================= -->
             <div class="modal fade" id="create_student" tabindex="-1" role="dialog" aria-labelledby="exampleModalCentername" aria-hidden="true">
@@ -229,6 +235,7 @@
 
 
         </div>
+   
       </div>
     </div>
   </div>
@@ -237,8 +244,19 @@
 @push('script')
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script>
+{{-- <script>
 $(document).ready( function () {
     $('#dataTable').DataTable();
 } );
-</script>
+</script> --}}
+<script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+@endpush

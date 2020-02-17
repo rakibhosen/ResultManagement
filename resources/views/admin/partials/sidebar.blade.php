@@ -6,10 +6,7 @@
          
                 <div class="text-wrapper">
                   <p class="profile-name"></p>
-                  <div>
-                   
-                  <span class="status-indicator online"></span>
-                  </div>
+     
                 </div>
               </div>
        

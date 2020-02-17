@@ -14,7 +14,7 @@
     <div class="col-md-10 offset-md-1">
         <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Upload Student</h4>
+              <h4 class="card-title text-center">Upload Student</h4>
               @include('admin.partials.message')
 
               <form action="{{ route('student.import') }}" method="POST" enctype="multipart/form-data">

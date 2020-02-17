@@ -18,7 +18,7 @@ class SectionController extends Controller
      */
     public function index()
     {
-        $sections = Section::all();
+        $sections = Section::orderBy('id','asc')->paginate(10);;
         return view('admin.pages.section.index',compact('sections'));
     }
 

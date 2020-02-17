@@ -21,7 +21,7 @@ class SubjectController extends Controller
 
     public function all_marks_View()
     {
-        $marks= Subject::orderBy('roll','asc')->get();
+        $marks= Subject::orderBy('roll','asc')->paginate(10);
         return view('admin.pages.marks.index',compact('marks'));
     }
 }

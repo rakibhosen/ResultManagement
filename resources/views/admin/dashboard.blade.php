@@ -4,7 +4,7 @@
 
 
 @push('css')
-<link relation="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
 
 @endpush
 
@@ -18,11 +18,11 @@
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
       <div class="card card-statistics">
         <div class="card-body">
-          <h4><a href="{{ route('admin.student_show') }}"> All Student</a></h4>
+          <h4 class="text-center"><a href="{{ route('admin.student_show') }}"> All Student</a></h4>
           @php
           $All_student = \DB::table('students')->count();
          @endphp
-         <p class="text-center"> @php echo $All_student @endphp </p>
+         <p class="text-center white"> @php echo $All_student @endphp </p>
         </div>
     </div>
   </div>
@@ -31,11 +31,11 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
         <div class="card card-statistics">
           <div class="card-body">
-          <h4><a href="{{route('section.index')}}">All Section</a></h4>
+            <h4 class="text-center"><a href="{{route('section.index')}}">All Section</a></h4>
             @php
             $All_section = \DB::table('sections')->count();
            @endphp
-           <p class="text-center"> @php echo $All_section @endphp </p>
+           <p class="text-center white"> @php echo $All_section @endphp </p>
           </div>
       </div>
     </div>
@@ -44,11 +44,11 @@
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
       <div class="card card-statistics">
         <div class="card-body">
-          <h4><a href="{{route('class.index')}}">All Class</a></h4>
+          <h4 class="text-center"><a href="{{route('class.index')}}">All Class</a></h4>
           @php
           $All_class = \DB::table('classes')->count();
           @endphp
-          <p class="text-center"> @php echo $All_class @endphp </p>
+          <p class="text-center white"> @php echo $All_class @endphp </p>
         </div>
     </div>
   </div>
@@ -57,11 +57,11 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
         <div class="card card-statistics">
           <div class="card-body">
-            <h4><a href="{{route('admin.marks_show')}}">All Subject</a></h4>
+            <h4 class="text-center"><a href="{{route('admin.marks_show')}}">All Subject</a></h4>
             @php
             $All_subject = \DB::table('subjects')->count();
             @endphp
-            <p class="text-center"> @php echo $All_subject @endphp </p>
+            <p class="text-center white"> @php echo $All_subject @endphp </p>
           </div>
       </div>
     </div>
