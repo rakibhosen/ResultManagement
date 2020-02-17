@@ -54,6 +54,7 @@ Route::group(['prefix'=>'admin'], function(){
 
     // admin avatar
     // Route::get('avatar', 'AdminController@avatar');
+    // Route::post('update/avatar', 'AdminController@update_avatar');
    
   
 
